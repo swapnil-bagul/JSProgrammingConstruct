@@ -107,6 +107,7 @@ else
     console.log("Enter Number Between 1 to 7");
 }
 
+
 //5.Read a single digit num and write number in word
 let singleDigitNum=prompt('Enter a single digit number: ');
 switch(singleDigitNum)
@@ -145,5 +146,6 @@ switch(singleDigitNum)
         console.log("Please enter a single digit number");
 
 }
+
 
 
