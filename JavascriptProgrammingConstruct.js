@@ -1,7 +1,6 @@
 var prompt = require('prompt-sync')();
 
 //************Sequence Practice Problem**********//
-
 //1. Use REPL – Random Function Math.floor(Math.random() * 10); to get Single digit.
 let randomNum=Math.floor(Math.random()*10);
 console.log("Random Num : "+randomNum);
@@ -29,16 +28,16 @@ console.log("Sum Of Random Two Digit Five Number is "+sumOfRandomFiveNum);
 
 //1. Write a program that reads 5 Random 3 Digit values and then outputs the minimum and the maximum value
 
-// let firstNum=prompt('Enter 1st num: ');
-// let secondNum=prompt('Enter 2st num: ');
-// let thirdNum=prompt('Enter 3st num: ');
-// let fourthNum=prompt('Enter 4st num: ');
-// let fifthNum=prompt('Enter 5st num: ');
-// console.log("Random Num: "+firstNum,secondNum,thirdNum,fourthNum,fifthNum);
-// let numArray=[firstNum,secondNum,thirdNum,fourthNum,fifthNum];
-// let sortedArray=numArray.sort();
-// console.log("Manimum num is: "+sortedArray[0])
-// console.log("Maximum num is: "+sortedArray[sortedArray.length-1]);
+let firstNum=prompt('Enter 1st num: ');
+let secondNum=prompt('Enter 2st num: ');
+let thirdNum=prompt('Enter 3st num: ');
+let fourthNum=prompt('Enter 4st num: ');
+let fifthNum=prompt('Enter 5st num: ');
+console.log("Random Num: "+firstNum,secondNum,thirdNum,fourthNum,fifthNum);
+let numArray=[firstNum,secondNum,thirdNum,fourthNum,fifthNum];
+let sortedArray=numArray.sort();
+console.log("Manimum num is: "+sortedArray[0])
+console.log("Maximum num is: "+sortedArray[sortedArray.length-1]);
 
 //2. find leap year or not
 let inputYear=prompt('Enter a Year: ');
@@ -112,7 +111,7 @@ else
 let singleDigitNum=prompt('Enter a single digit number: ');
 switch(singleDigitNum)
 {
-    case 1:
+    case "1":
         console.log("Its One");
         break;
     case 2:
@@ -145,7 +144,43 @@ switch(singleDigitNum)
     default:
         console.log("Please enter a single digit number");
 
+} 
+
+//Arrays Assignment
+//1. Write a program in the following steps
+// Generates 10 Random 3 Digit number.
+// Store this random numbers into a array.
+// Then find the 2nd largest and the 2nd smallest element without sorting the array.
+
+let threeDigitMumArray= new Array();
+for(var i=0; i<5;i++)
+{
+    let randomThreeDigitNum=Math.floor(Math.random()*899)+100;
+    threeDigitMumArray[i]=randomThreeDigitNum;
 }
+let sortedArray=threeDigitMumArray.sort();
+console.log("5 Random Number: "+threeDigitMumArray);
+console.log("2 nd Smallest No: "+sortedArray[1]);
+console.log("2 nd largest No: "+sortedArray[threeDigitMumArray.length-2]);
+ 
+//Take a range from 0 – 100, find the digits that are repeated twice like 33, 77,etc and store them in an array
+let reapatingNumArray=new Array();
+function magicNumFinding()
+{
+    for(let i=1;i<=100;i++)
+    {
+        let num=i;
+        //var intvalue = Math.floor( floatvalue );
+        let conditionFirst=Math.floor(num/10);
+        let conditionTwo=num%10;
+        if(conditionFirst==conditionTwo)
+        {
+            reapatingNumArray.push(num);
+        }
+    }  
+    console.log("repeated twice num: "+reapatingNumArray);  
+}
+magicNumFinding();
 
 
 
